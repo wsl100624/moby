@@ -642,7 +642,8 @@ func (s *Scheduler) scheduleNTasksOnNodes(ctx context.Context, n int, taskGroup 
 	tasksScheduled := 0
 	failedConstraints := make(map[int]bool) // key is index in nodes slice
 	nodeIter := 0
-	nodeCount := len(nodes)
+	//nodeCount := len(nodes)
+	nodeCount := 1
 	for taskID, t := range taskGroup {
 		// Skip tasks which were already scheduled because they ended
 		// up in two groups at once.
